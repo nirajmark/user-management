@@ -15,3 +15,6 @@ write models in models folder
 write routes in routes folder
 
 I will create the sample project using this starter and add the link here.
+
+I am following tutorial by *"Jon Ribeiro"*
+You can get all tutorial at : *"https://jonathas.com/posts/"*
