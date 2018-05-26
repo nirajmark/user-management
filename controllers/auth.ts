@@ -67,7 +67,7 @@ class Auth {
                     return done(null, false, { message: "The user in the token was not found" });
                 }
 
-                return done(null, { _id: user._id, username: user.username });
+                return done(null, { _id: user._id, username: user.username, role:user.role });
             });
         });
     }

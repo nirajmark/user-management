@@ -13,8 +13,14 @@ export = () => {
     app.use(auth.initialize());
 
     app.all(process.env.API_BASE + "*", (req, res, next) => {
-        if (req.path.includes(process.env.API_BASE + "login")) return next();
+        if (req.path.includes(process.env.API_BASE + "login")) {
+            return next();
+        }
+        //else if (req.path.toLowerCase().includes(process.env.API_BASE + "createuser")){
+        //     return next();
+        // }
 
+        
         return auth.authenticate((err, user, info) => {
             if (err) { return next(err); }
             if (!user) {
@@ -25,6 +31,7 @@ export = () => {
                 }
             }
             app.set("user", user);
+            req.user=user
             return next();
         })(req, res, next);
     });

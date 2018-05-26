@@ -52,6 +52,14 @@ export const login = async (role): Promise<any> => {
         .expect(200);
 };
 
+export const createUserFromApi = async (token: string, user: object): Promise<any> => {
+    
+    return request.post(process.env.API_BASE + "createUser")
+        .set("Authorization", token)
+        .send(user)
+        .expect(200);
+};
+
 export const cleanCollections = (): Promise<any> => {
     const cleanUp = [
         userCleanCollection()

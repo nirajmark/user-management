@@ -2,6 +2,7 @@ export = (app) => {
 
     // Require the routes files in the routes directory
     require("./auth")(app);
+    require("./user")(app);
 
     app.get("/", (req, res) => res.status(200).json({ message: "Welcome to the TODO API. Check the documentation for the list of available endpoints" }));
 

@@ -50,7 +50,7 @@ describe("# User Login", () => {
 
     it("should return token expired message", () => {
         return request.post(process.env.API_BASE + "tasks")
-            .set("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTg5Mzk1MTksInVzZXJuYW1lIjoidGVzdHVzZXIifQ.FUJcVCzZTkjDr62MCJj5gvCFvmxewmz2jotiknuVbOg")
+            .set("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1MjczMzE4NzksInVzZXJuYW1lIjoidGVzdHVzZXIiLCJyb2xlIjoibW9kZXJhdG9yIn0.Ha7HdMPpPWwCNWTqpmg3iTgn671cAPBE_9qTezhX-ws")
             .send({
                 name: "Do the dishes"
             })
